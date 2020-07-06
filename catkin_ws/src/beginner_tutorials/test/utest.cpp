@@ -1,7 +1,7 @@
 #include <gtest/gtest.h>
 
-TEST(MathExpressions, operatorRecognition){
-  ASSERT_EQ(5, 7);
+TEST(TestGroup, testName){
+
 }
 
 
