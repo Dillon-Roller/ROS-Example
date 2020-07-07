@@ -35,3 +35,5 @@ add_dependencies(add_two_ints_client beginner_tutorials_gencpp)
 
 ## Test node
 catkin_add_gtest(utest test/utest.cpp)
+target_link_libraries(utest ${catkin_LIBRARIES})
+add_dependencies(utest beginner_tutorials_gencpp)
