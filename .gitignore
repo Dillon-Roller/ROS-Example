@@ -6,4 +6,5 @@ msg_gen/
 srv_gen/
 devel/
 bagfiles/
+install/
 .vscode
