@@ -33,7 +33,18 @@ add_executable(add_two_ints_client src/add_two_ints_client.cpp)
 target_link_libraries(add_two_ints_client ${catkin_LIBRARIES})
 add_dependencies(add_two_ints_client beginner_tutorials_gencpp)
 
-## Test node
-catkin_add_gtest(utest test/utest.cpp)
-target_link_libraries(utest ${catkin_LIBRARIES})
-add_dependencies(utest beginner_tutorials_gencpp)
+
+if(CATKIN_ENABLE_TESTING)
+    find_package(rostest REQUIRED)
+
+    ## Node Test 
+    add_rostest_gtest(rostest rostest/rostest.test rostest/rostest.cpp)
+    target_link_libraries(rostest ${catkin_LIBRARIES})
+    add_dependencies(rostest beginner_tutorials_gencpp)
+
+    ## Unit Test 
+    catkin_add_gtest(unittest test/unittest.cpp)
+    target_link_libraries(unittest ${catkin_LIBRARIES})
+    add_dependencies(unittest beginner_tutorials_gencpp)
+
+endif()
