@@ -12,9 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
-      - run: |
-          git clone https://github.com/Dillon-Roller/ROS-Intro.git
-          cd ROS-Intro/
-          ls
+      - uses: 'ros-industrial/industrial_ci@master'
+        env: ${{matrix.env}}
 
           
