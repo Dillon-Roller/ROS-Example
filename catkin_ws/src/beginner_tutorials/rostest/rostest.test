@@ -1,4 +1,4 @@
 <launch>
     <node pkg="beginner_tutorials" type="add_two_ints_server" name="add_two_ints_server"/>
-    <test test-name="ClientTest" pkg="beginner_tutorials" type="utest" />
+    <test test-name="ClientTest" pkg="beginner_tutorials" type="rostest" />
 </launch>
