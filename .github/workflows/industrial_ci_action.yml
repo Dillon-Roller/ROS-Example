@@ -12,6 +12,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
-      - run: |
-          cd ./catkin_ws/src/beginner_tutorials/test/
-          rostest utest.launch
+      - uses: 'ros-industrial/industrial_ci@master'
+        env: ${{matrix.env}}
