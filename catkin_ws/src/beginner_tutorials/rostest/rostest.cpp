@@ -23,7 +23,7 @@ TEST(TestNode, testAddIntsClient){
   }
 
   //Assert the sum be 1 + 1 = 2
-  EXPECT_EQ((long int)srv.response.sum, (long int)3);
+  EXPECT_EQ((long int)srv.response.sum, (long int)2);
 }
 
 int main(int argc, char **argv){
