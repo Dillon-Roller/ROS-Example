@@ -16,7 +16,9 @@ jobs:
         env: ${{matrix.env}}
       - uses: actions/checkout@v2
 
-      - run: ls
+      - run: |
+            cd catkin_ws/
+            ls
 
       #- run: echo hello > path/to/artifact/world.txt
 
