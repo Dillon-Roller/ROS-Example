@@ -14,5 +14,14 @@ jobs:
       - uses: actions/checkout@v1
       - uses: 'ros-industrial/industrial_ci@master'
         env: ${{matrix.env}}
+      - uses: actions/checkout@v2
 
+      - run: mkdir -p path/to/artifact
+
+      - run: echo hello > path/to/artifact/world.txt
+
+      - uses: actions/upload-artifact@v2
+        with:s
+          name: my-artifact
+          path: path/to/artifact/world.txt
           
