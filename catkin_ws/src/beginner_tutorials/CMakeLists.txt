@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 2.8.3)
 project(beginner_tutorials)
 
 ## Find catkin and any catkin packages
-find_package(catkin REQUIRED COMPONENTS roscpp rospy std_msgs genmsg)
+find_package(catkin REQUIRED COMPONENTS rosbag roscpp rospy std_msgs genmsg)
 
 ## Declare ROS messages and services
 add_message_files(FILES Num.msg)
@@ -32,6 +32,9 @@ add_dependencies(add_two_ints_server beginner_tutorials_gencpp)
 add_executable(add_two_ints_client src/add_two_ints_client.cpp)
 target_link_libraries(add_two_ints_client ${catkin_LIBRARIES})
 add_dependencies(add_two_ints_client beginner_tutorials_gencpp)
+
+add_executable(createBag src/createBag.cpp)
+target_link_libraries(createBag ${catkin_LIBRARIES})
 
 
 if(CATKIN_ENABLE_TESTING)
