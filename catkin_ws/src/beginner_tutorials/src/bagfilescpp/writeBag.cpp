@@ -9,7 +9,7 @@ int main(int argc, char **argv) {
 
     ros::Time::init();
     rosbag::Bag bag;
-    bag.open("test.bag", rosbag::bagmode::Write);
+    bag.open("./src/beginner_tutorials/bagfiles/test.bag", rosbag::bagmode::Write);
 
     std_msgs::String str;
     str.data = std::string("foo");
