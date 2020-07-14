@@ -16,7 +16,6 @@ jobs:
         env: ${{matrix.env}}
 
       - run: |
-            cd ~
             ls -a
             
 
