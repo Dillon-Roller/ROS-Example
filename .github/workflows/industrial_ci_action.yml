@@ -17,7 +17,8 @@ jobs:
       - uses: actions/checkout@v2
 
       - run: |
-            cd ~/_temp
+            cd ~
+            ls
             
 
       #- run: echo hello > path/to/artifact/world.txt
@@ -27,3 +28,4 @@ jobs:
       #    name: my-artifact
       #    path: path/to/artifact/world.txt
           
+        
