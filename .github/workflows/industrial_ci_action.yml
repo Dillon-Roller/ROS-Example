@@ -16,8 +16,7 @@ jobs:
         env: ${{matrix.env}}
 
       - run: |
-            cd ~
-            cd runners/
+            cd /
             ls -a
             
             
