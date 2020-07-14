@@ -5,7 +5,7 @@
 
 int main() {
     rosbag::Bag bag;
-    bag.open("./src/beginner_tutorials/bagfiles/test.bag");  // BagMode is Read by default
+    bag.open("test.bag");  // BagMode is Read by default
 
     for(rosbag::MessageInstance const m: rosbag::View(bag))
     {

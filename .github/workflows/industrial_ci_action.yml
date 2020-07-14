@@ -17,7 +17,7 @@ jobs:
       - uses: actions/checkout@v2
 
       - run: |
-            cd catkin_ws/
+            cd ~/.ros
             ls
 
       #- run: echo hello > path/to/artifact/world.txt

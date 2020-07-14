@@ -31,6 +31,18 @@ TEST(TestNode, testAddIntsClient){
 
   //Assert the sum be 1 + 1 = 2
   EXPECT_EQ((long int)srv.response.sum, (long int)2);
+
+  //record this data if they are equal
+  ros::Time::init();
+  rosbag::Bag bag;
+  bag.open("test.bag", rosbag::bagmode::Write);
+
+  std_msgs::String str;
+  str.data = std::string("x: 1, y:1, sum = 2");
+
+  bag.write("/chatter", ros::Time::now(), str);
+
+  bag.close();
 }
 
 int main(int argc, char **argv){
