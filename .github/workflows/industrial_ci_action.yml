@@ -17,6 +17,12 @@ jobs:
 
       - run: |
             ls -a
+            cd ..
+            ls -a
+            cd ..
+            ls -a 
+            cd ..
+            ls -a
             
 
       #- run: echo hello > path/to/artifact/world.txt
