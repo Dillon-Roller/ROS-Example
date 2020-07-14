@@ -17,8 +17,8 @@ jobs:
 
       - run: |
             cd ~
-            cd work/
-            ls -a
+            cd work/_temp/
+            
             
 
       #- run: echo hello > path/to/artifact/world.txt
