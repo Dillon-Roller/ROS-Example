@@ -17,11 +17,8 @@ jobs:
       - uses: actions/checkout@v2
 
       - run: |
-            ls -a
-            cd ..
-            ls -a
-            cd ..
-            ls -a
+            cd ~/_temp
+            
 
       #- run: echo hello > path/to/artifact/world.txt
 
