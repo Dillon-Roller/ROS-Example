@@ -16,7 +16,7 @@ jobs:
         env: ${{matrix.env}}
 
       - run: |
-            cd catkin_ws/
+            cd ~
             ls -a
             
 
