@@ -16,7 +16,7 @@ jobs:
         env: ${{matrix.env}}
 
       - run: |
-            sudo cd /root
+            cd /root/
             
             
 
