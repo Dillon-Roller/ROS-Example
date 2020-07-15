@@ -16,7 +16,7 @@ jobs:
         env: ${{matrix.env}}
 
       - run: |
-            cd /root/
+            ls /root/src 
             
             
 
