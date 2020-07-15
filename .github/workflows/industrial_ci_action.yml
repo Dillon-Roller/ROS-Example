@@ -9,22 +9,10 @@ jobs:
         env:
           #- {ROS_DISTRO: melodic, ROS_REPO: testing}
           - {ROS_DISTRO: melodic, ROS_REPO: main}
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
       - uses: actions/checkout@v1
       - uses: 'ros-industrial/industrial_ci@master'
         env: ${{matrix.env}}
-
-      - run: |
-            sudo ls /root/
-            
-            
-
-      #- run: echo hello > path/to/artifact/world.txt
-
-      #- uses: actions/upload-artifact@v2
-      #  with:
-      #    name: my-artifact
-      #    path: path/to/artifact/world.txt
           
         
