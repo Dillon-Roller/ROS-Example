@@ -16,8 +16,7 @@ jobs:
         env: ${{matrix.env}}
 
       - run: |
-            cd ~/factory/
-            ls -a
+            sudo cd /root
             
             
 
