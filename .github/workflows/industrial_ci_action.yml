@@ -16,7 +16,7 @@ jobs:
         env: ${{matrix.env}}
 
       - run: |
-            ls /root/src 
+            ls /root/src/ROS-Intro/
             
             
 
