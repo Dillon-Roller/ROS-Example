@@ -43,6 +43,7 @@ TEST(TestNode, testAddIntsClient){
   bag.write("/chatter", ros::Time::now(), str);
 
   bag.close();
+  
 }
 
 int main(int argc, char **argv){
