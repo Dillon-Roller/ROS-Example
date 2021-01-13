@@ -1,10 +1,11 @@
 #include "ros/ros.h"
 #include "beginner_tutorials/AddTwoInts.h"
+#include "math_functions.h"
 
 bool add(beginner_tutorials::AddTwoInts::Request  &req,
          beginner_tutorials::AddTwoInts::Response &res)
 {
-  res.sum = req.a + req.b;
+  res.sum = MathFunctions::add(req.a, req.b);
   ROS_INFO("request: x=%ld, y=%ld", (long int)req.a, (long int)req.b);
   ROS_INFO("sending back response: [%ld]", (long int)res.sum);
   return true;
